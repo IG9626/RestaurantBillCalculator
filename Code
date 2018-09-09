@@ -1,0 +1,40 @@
+import java.util.Scanner;
+class Main {
+  public static void main(String[] args) {
+    int q;
+    double p;//the total bill
+    double r;//number of people
+    double w;//percent tax
+    double a;//total bill and tax
+    double t;//total tax
+    double b;//total bill and tax per person
+    double s;//total bill per person
+    double f;//total tax per person
+    Scanner in = new Scanner (System.in);
+    System.out.println("THIS IS MY JAVA PROJECT CHAPTER 1");
+    System.out.println("This app calculates the amount of money you and your friends pay for a resturant. To continue type any number");
+     q = in.nextInt();
+
+     System.out.println("enter the total bill,excluding tax:");
+     p = in.nextDouble();
+
+     System.out.println("enter the number of people:");
+     r = in.nextDouble();
+
+     System.out.println("enter the percent tip");
+     w = in.nextDouble();
+
+     a = ((1+w)*p);//total bill and tax
+     t= (w*p);//total tax
+     b= (((1+w)*p)/r);//total bill and tax per person
+     s=(p/r);//total bill per person
+     f=(t/r);//total tax per person
+     
+
+     System.out.println(p);
+     System.out.println(r);
+     System.out.println(w);
+     System.out.println(t);
+     System.out.println("the total amount of the resturant bill + tax is: "+ a+"\n the total amount of the resturant bill is: "+p+" \n the total amount of tax is: "+t+"\n the total amount of bill and tax per person is: "+b+"\n the total bill per person is: "+s+"\n the total tax per person is: "+f);
+  }
+}
